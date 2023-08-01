@@ -47,10 +47,10 @@ const LiveSection = () => {
         
         
         const urlAtualFrame = document.querySelector('#twitchFrame')?.getAttribute('src')
-        const newUrlFrame = `https://player.twitch.tv?autoplay=true&channel=${onLiveStreamer}&height=100%25&muted=false&parent=localhost&referrer=https%3A%2F%2Fwww.baiano.tv%2Fmulti%2F&width=100%25`
+        const newUrlFrame = `https://player.twitch.tv?autoplay=true&channel=${onLiveStreamer}&height=100%25&muted=false&parent=go-team.vercel.app&referrer=https%3A%2F%2Fwww.baiano.tv%2Fmulti%2F&width=100%25`
         if(urlAtualFrame == newUrlFrame) return;
-        document.querySelector('#twitchFrame')?.setAttribute('src', `https://player.twitch.tv?autoplay=true&channel=${onLiveStreamer}&height=100%25&muted=false&parent=localhost&referrer=https%3A%2F%2Fwww.baiano.tv%2Fmulti%2F&width=100%25`)
-        document.querySelector('#twitchChat')?.setAttribute('src', `https://www.twitch.tv/embed/${onLiveStreamer}/chat?&darkpopout&parent=localhost`)
+        document.querySelector('#twitchFrame')?.setAttribute('src', `https://player.twitch.tv?autoplay=true&channel=${onLiveStreamer}&height=100%25&muted=false&parent=go-team.vercel.app&referrer=https%3A%2F%2Fwww.baiano.tv%2Fmulti%2F&width=100%25`)
+        document.querySelector('#twitchChat')?.setAttribute('src', `https://www.twitch.tv/embed/${onLiveStreamer}/chat?&darkpopout&parent=go-team.vercel.app`)
         
     } catch (error) {
       console.error('Erro na consulta à API:', error);
@@ -75,10 +75,10 @@ const LiveSection = () => {
     <div>
       <div className='flex lg:justify-around lg:flex-row flex-col justify-center items-center lg:mt-10 lg:mb-5'>
         <div className='h-[60vh] lg:w-[60vw] w-[80vw] items-center'>
-          <iframe id='twitchFrame' src={`https://player.twitch.tv?autoplay=true&channel=${onLiveStreamer}&height=100%25&muted=false&parent=localhost&width=100%25`} scrolling="no" allow="autoplay; fullscreen" title="Twitch" sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" width="100%" height="100%"></iframe>
+          <iframe id='twitchFrame' src={`https://player.twitch.tv?autoplay=true&channel=${onLiveStreamer}&height=100%25&muted=false&parent=go-team.vercel.app&width=100%25`} scrolling="no" allow="autoplay; fullscreen" title="Twitch" sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" width="100%" height="100%"></iframe>
         </div>
         <div className='h-[60vh] lg:my-0 my-5'>
-          <iframe id='twitchChat' className='h-[100%]' src={`https://www.twitch.tv/embed/${onLiveStreamer}/chat?&darkpopout&parent=localhost`}></iframe>
+          <iframe id='twitchChat' className='h-[100%]' src={`https://www.twitch.tv/embed/${onLiveStreamer}/chat?&darkpopout&parent=go-team.vercel.app`}></iframe>
         </div>
       </div>
     </div>
