@@ -39,10 +39,9 @@ const LiveSection = () => {
         if(hojeHora == 23 || hojeHora == 0) streamerTwitch = responseData.streamerAgendado20
         if(hojeHora >= 1 && hojeHora < 3) streamerTwitch = responseData.streamerAgendado22
 
-        if(streamerTwitch == 'nenhum') onLiveStreamer = 'horadrage'
+        if(streamerTwitch == 'nenhum') onLiveStreamer = 'twitch.tv/horadrage';
 
-        streamerTwitch.split('/');
-        onLiveStreamer = streamerTwitch.split('/')[1];
+        onLiveStreamer = streamerTwitch.split('/')[1].toLocaleLowerCase();
 
         
         
